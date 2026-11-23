@@ -52,3 +52,4 @@ function showToast(message) {
     toast.textContent = message;
     container.appendChild(toast);
     setTimeout(() => toast.remove(), 3000);
+}
