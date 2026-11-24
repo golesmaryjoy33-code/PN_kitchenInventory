@@ -48,14 +48,29 @@
                     <p class="login-subtitle">Log in as Kitchen Staff (Ate Tina) or Student Coordinator.</p>
 
                     <form id="loginForm">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" value="tina" placeholder="Enter your username" autocomplete="username" required>
+                      <label for="username">Username</label>
+<input
+    type="text"
+    id="username"
+    value=""
+    placeholder="Enter your username"
+    autocomplete="off"
+    required
+>
 
-                        <label for="password">Password</label>
-                        <div class="password-field">
-                            <input type="password" id="password" value="pn12345" placeholder="Enter your password" autocomplete="current-password" required>
-                            <button type="button" id="togglePassword">Show</button>
-                        </div>
+<label for="password">Password</label>
+<div class="password-field">
+    <input
+        type="password"
+        id="password"
+        value=""
+        placeholder="Enter your password"
+        autocomplete="new-password"
+        required
+    >
+
+    <button type="button" id="togglePassword">Show</button>
+</div>
 
                         <p id="loginError" class="login-error" role="alert"></p>
 

@@ -279,3 +279,8 @@ function initAuth() {
     document.getElementById("dashboardApp").style.display = "none";
     showAuthTab("login");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
+});
