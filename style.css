@@ -577,91 +577,107 @@ button {
     .table-card { border: 1px solid #cbd5e1; box-shadow: none; break-inside: avoid; }
 }
 
-/* DESKTOP LAYOUT */
-.login-container {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-}
+    
 
-.left-section {
-    width: 55%;
-}
-
-.right-section {
-    width: 45%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* TABLET */
-@media screen and (max-width: 992px) {
-    .left-section {
-        width: 50%;
+    .sidebar {
+        padding: 10px;
     }
 
-    .right-section {
-        width: 50%;
-    }
-}
-
-/* MOBILE */
-@media screen and (max-width: 768px) {
-
-    .login-container {
-        flex-direction: column;
-        min-height: 100vh;
+    .dashboard-body {
+        padding: 10px;
     }
 
-    .left-section {
-        width: 100%;
-        min-height: auto;
-        padding: 30px 20px;
+    .topbar {
+        padding: 10px;
     }
 
-    .right-section {
-        width: 100%;
-        padding: 25px 15px;
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .login-card {
-        width: 100%;
-        max-width: 450px;
-        padding: 25px 20px;
-        margin: 0 auto;
+    .stat-card {
+        padding: 10px;
     }
 
-    .left-section h1 {
-        font-size: 32px;
+    .stat-card h2 {
+        font-size: 16px;
     }
 
-    .left-section p {
-        font-size: 14px;
+    .quick-actions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .right-section input {
-        width: 100%;
-        box-sizing: border-box;
+    .panel {
+        padding: 12px;
     }
 
-    .right-section button {
-        max-width: 100%;
-    }
-}
-
-/* SMALL MOBILE PHONES */
-@media screen and (max-width: 480px) {
-
-    .left-section {
-        padding: 25px 18px;
+    .rice-cooker-wrapper {
+        gap: 10px;
     }
 
-    .left-section h1 {
-        font-size: 27px;
+    .modal-card {
+        padding: 16px;
+    }
+
+
+/* EXTRA SMALL SCREENS */
+@media screen and (max-width: 360px) {
+
+    .login-message h1 {
+        font-size: 24px;
     }
 
     .login-card {
-        padding: 20px 16px;
+        padding: 18px 13px;
+    }
+
+    .role-pill {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+
+    .nav-link {
+        font-size: 11px;
+        padding: 8px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PRINT WEEKLY REPORT STYLING */
+@media print {
+    body {
+        background: #ffffff;
+    }
+
+    .sidebar,
+    .topbar,
+    .btn-primary,
+    .btn-accent-delivery,
+    .btn-light,
+    .toast-container {
+        display: none !important;
+    }
+
+    .app {
+        display: block;
+        height: auto;
+        overflow: visible;
+    }
+
+    .main-content {
+        overflow: visible;
+    }
+
+    .dashboard-body {
+        padding: 0;
+    }
+
+    .table-card {
+        border: 1px solid #cbd5e1;
+        box-shadow: none;
+        break-inside: avoid;
     }
 }
