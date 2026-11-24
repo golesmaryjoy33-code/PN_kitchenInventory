@@ -95,6 +95,12 @@ function enterDashboard(user) {
     document.getElementById("dropdownAvatar").textContent = initial;
     document.getElementById("dropdownFullName").textContent = displayName;
     document.getElementById("dropdownUsername").textContent = `@${user.username} (${user.role === "coordinator" ? "Coordinator" : "Staff"})`;
+    
+    // Load the profile picture belonging to the logged-in account
+if (typeof window.loadProfilePicture === "function") {
+    window.loadProfilePicture(user.username);
+}
+
 
     document.getElementById("dashboardGreeting").textContent = `Welcome back, ${displayName}! 🌿`;
     sessionStorage.setItem(SESSION_KEY, user.username);
@@ -129,6 +135,15 @@ function switchAccount() {
     document.getElementById("profileDropdown").classList.remove("active");
     sessionStorage.removeItem(SESSION_KEY);
     currentLoggedInUser = null;
+    // Reset the displayed profile
+document.getElementById("userAvatar").style.backgroundImage = "none";
+document.getElementById("dropdownAvatar").style.backgroundImage = "none";
+
+document.getElementById("userAvatar").textContent = "?";
+document.getElementById("dropdownAvatar").textContent = "?";
+
+document.getElementById("dropdownFullName").textContent = "";
+document.getElementById("dropdownUsername").textContent = "";
     document.getElementById("dashboardApp").style.display = "none";
     document.getElementById("loginPage").style.display = "grid";
     document.getElementById("username").value = "";
@@ -152,6 +167,15 @@ function triggerLogout() {
     document.getElementById("profileDropdown").classList.remove("active");
     sessionStorage.removeItem(SESSION_KEY);
     currentLoggedInUser = null;
+    // Reset the displayed profile
+document.getElementById("userAvatar").style.backgroundImage = "none";
+document.getElementById("dropdownAvatar").style.backgroundImage = "none";
+
+document.getElementById("userAvatar").textContent = "?";
+document.getElementById("dropdownAvatar").textContent = "?";
+
+document.getElementById("dropdownFullName").textContent = "";
+document.getElementById("dropdownUsername").textContent = "";
     document.getElementById("dashboardApp").style.display = "none";
     document.getElementById("loginPage").style.display = "grid";
     showAuthTab("login");

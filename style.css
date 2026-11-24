@@ -278,11 +278,51 @@ button {
 }
 
 /* AVATAR & USER PROFILE TRIGGER */
+/* AVATAR & USER PROFILE TRIGGER */
 .avatar {
-    width: 34px; height: 34px; border-radius: 50%; background: var(--accent);
-    color: white; display: grid; place-items: center; font-weight: bold;
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 50%;
+
+    background: var(--accent);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+    font-size: 14px;
+
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-.avatar.large { width: 42px; height: 42px; font-size: 16px; }
+
+.avatar.large {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    font-size: 20px;
+}
+
+/* PROFILE INFORMATION */
+.profile-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.profile-user-info h4 {
+    margin: 0 0 4px;
+    color: var(--deep-sky);
+}
+
+.profile-user-info small {
+    color: var(--muted);
+}
 
 .user-profile-wrapper { position: relative; }
 .user-profile-trigger {

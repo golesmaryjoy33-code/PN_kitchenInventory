@@ -192,26 +192,57 @@
                         </div>
 
                         <!-- DROPDOWN POPUP MENU -->
-                        <div class="profile-dropdown" id="profileDropdown">
-                            <div class="profile-dropdown-header">
-                                <div class="avatar large" id="dropdownAvatar">T</div>
-                                <div>
-                                    <h4 id="dropdownFullName">Tina</h4>
-                                    <small id="dropdownUsername">@tina</small>
-                                </div>
-                            </div>
-                            <div class="profile-dropdown-divider"></div>
-                            <button type="button" class="profile-dropdown-item" onclick="switchAccount()">
-                                🔄 Switch Account (Staff / Coordinator)
-                            </button>
-                            <button type="button" class="profile-dropdown-item" onclick="registerNewStaff()">
-                                ➕ Register New Account
-                            </button>
-                            <div class="profile-dropdown-divider"></div>
-                            <button type="button" class="profile-dropdown-item danger" onclick="triggerLogout()">
-                                🔒 Log Out
-                            </button>
-                        </div>
+                       <!-- DROPDOWN POPUP MENU -->
+<div class="profile-dropdown" id="profileDropdown">
+
+    <div class="profile-dropdown-header">
+
+        <div class="avatar large" id="dropdownAvatar">
+            T
+        </div>
+
+        <div class="profile-user-info">
+            <h4 id="dropdownFullName">Tina</h4>
+            <small id="dropdownUsername">@tina</small>
+        </div>
+
+    </div>
+
+    <div class="profile-dropdown-divider"></div>
+
+    <!-- CHANGE PROFILE PICTURE -->
+    <button
+        type="button"
+        class="profile-dropdown-item"
+        id="changeProfileBtn">
+        📷 Change Profile Picture
+    </button>
+
+    <!-- HIDDEN FILE INPUT -->
+    <input
+        type="file"
+        id="profileImageInput"
+        accept="image/png, image/jpeg, image/webp"
+        hidden
+    >
+
+    <div class="profile-dropdown-divider"></div>
+
+    <button type="button" class="profile-dropdown-item" onclick="switchAccount()">
+        🔄 Switch Account (Staff / Coordinator)
+    </button>
+
+    <button type="button" class="profile-dropdown-item" onclick="registerNewStaff()">
+        ➕ Register New Account
+    </button>
+
+    <div class="profile-dropdown-divider"></div>
+
+    <button type="button" class="profile-dropdown-item danger" onclick="triggerLogout()">
+        🔒 Log Out
+    </button>
+
+</div>
                     </div>
                 </div>
             </header>
@@ -944,6 +975,7 @@
 <script src="js/suppliers.js" defer></script>
 <script src="js/forms.js" defer></script>
 <script src="js/actions.js" defer></script>
+<script src="js/profile.js" defer></script>
 
 
 </body>
