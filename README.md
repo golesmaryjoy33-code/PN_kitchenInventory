@@ -1,2 +1,5 @@
+
 # PN_kitchenInventory
-a smart kitchen inventory
+A smart kitchen inventory
+
+This project helps manage kitchen inventory and related information.
